@@ -1,5 +1,6 @@
 import Layout from './components/layouts/Layout';
 import Home from './pages/home';
+import Login from './pages/login';
 
 const { Routes, Route } = require('react-router-dom');
 
@@ -8,7 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/login" element={<h1>Login</h1>} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<h1>Register</h1>} />
       </Route>
     </Routes>
