@@ -1,5 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import { Link, useLocation } from 'react-router-dom';
+import ShoppingCartItem from './ShoppingCart';
 
 const routes = [
   {
@@ -22,6 +23,9 @@ const Navlinks = (props) => {
   return (
     <Nav className="me-auto" activeKey={location.pathname}>
       {navItems}
+      <Nav.Item>
+        <ShoppingCartItem />
+      </Nav.Item>
     </Nav>
   );
 };
