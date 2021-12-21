@@ -5,7 +5,7 @@ import FormControl from 'react-bootstrap/FormControl';
 
 const StyledSearchbar = styled(FormControl)`
   width: 230px;
-  opacity: 0.97;
+  opacity: 0.8;
   transition: opacity 260ms ease-in-out;
   &:focus {
     opacity: 1;
