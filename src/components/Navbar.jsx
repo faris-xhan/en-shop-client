@@ -2,6 +2,7 @@ import BootstrapNavbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { Brand } from './Brand';
 import Searchbar from './Searchbar';
+import Navlinks from './Navlinks';
 
 const Navbar = (props) => {
   return (
@@ -9,6 +10,7 @@ const Navbar = (props) => {
       <Container>
         <Brand />
         <Searchbar />
+        <Navlinks />
       </Container>
     </BootstrapNavbar>
   );
