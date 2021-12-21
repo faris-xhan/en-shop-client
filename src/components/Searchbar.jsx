@@ -15,9 +15,13 @@ const StyledSearchbar = styled(FormControl)`
 const Searchbar = (props) => {
   const [input, setInput] = useState('');
   const handleInputChange = (event) => setInput(event.target.value);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(input);
+  };
 
   return (
-    <Form className="d-flex">
+    <Form onSubmit={handleSubmit} className="d-flex">
       <StyledSearchbar
         size="sm"
         type="search"
