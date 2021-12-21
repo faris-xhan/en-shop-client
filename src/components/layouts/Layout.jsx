@@ -6,7 +6,9 @@ const Layout = (props) => {
   return (
     <Container fluid className="p-0">
       <Navbar />
-      <Outlet />
+      <Container className="vh-100 pt-5">
+        <Outlet />
+      </Container>
     </Container>
   );
 };
