@@ -1,14 +1,14 @@
-import Container from 'react-bootstrap/Container';
+import Navbar from '../Navbar';
 import { Outlet } from 'react-router-dom';
 import Announcements from '../Announcements';
-import Navbar from '../Navbar';
+import Container from 'react-bootstrap/Container';
 
 const Layout = (props) => {
   return (
     <Container fluid className="p-0">
       <Announcements />
       <Navbar />
-      <Container>
+      <Container fluid className="p-0 " style={{ height: '80vh' }}>
         <Outlet />
       </Container>
     </Container>
