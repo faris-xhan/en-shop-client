@@ -1,3 +1,4 @@
+import Layout from './components/layouts/Layout';
 import Home from './pages/home';
 
 const { Routes, Route } = require('react-router-dom');
@@ -5,7 +6,9 @@ const { Routes, Route } = require('react-router-dom');
 function App() {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route path="/" element={<Layout />}>
+        <Route index path="/" element={<Home />} />
+      </Route>
     </Routes>
   );
 }
