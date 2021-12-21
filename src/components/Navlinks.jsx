@@ -4,12 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 const routes = [
   {
     path: '/login',
-    label: 'Login',
+    label: 'LOGIN',
   },
 
   {
     path: '/register',
-    label: 'Register',
+    label: 'REGISTER',
   },
 ];
 
