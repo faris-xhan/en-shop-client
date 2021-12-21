@@ -6,7 +6,7 @@ import Navlinks from './Navlinks';
 
 const Navbar = (props) => {
   return (
-    <BootstrapNavbar bg="dark" variant="dark" fixed="top">
+    <BootstrapNavbar bg="dark" variant="dark">
       <Container>
         <Brand />
         <div className="flex-grow-1" />
