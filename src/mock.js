@@ -21,3 +21,22 @@ export const sliderItems = [
     bg: 'fbf0f4',
   },
 ];
+
+export const categories = [
+  {
+    id: 1,
+    img: 'https://static.onecms.io/wp-content/uploads/sites/23/2021/05/27/t-shirt-test-2000.jpg',
+    title: 'Shirts',
+  },
+
+  {
+    id: 2,
+    img: 'https://cf.shopee.sg/file/fa8c632cd0d0208cc226d1c2445fe167',
+    title: 'Bags',
+  },
+  {
+    id: 3,
+    img: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bomber-jackets-lead-1633354600.jpg?crop=1.00xw:0.892xh;0,0.0484xh&resize=1200:*',
+    title: 'Jackets',
+  },
+];
