@@ -9,6 +9,7 @@ const Navbar = (props) => {
     <BootstrapNavbar bg="dark" variant="dark" fixed="top">
       <Container>
         <Brand />
+        <div className="flex-grow-1" />
         <Searchbar />
         <Navlinks />
       </Container>
