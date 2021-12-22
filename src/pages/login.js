@@ -52,7 +52,7 @@ const Login = (props) => {
         className="p-5 rounded rounded-5"
         style={{
           maxWidth: '600px',
-          backgroundColor: 'white',
+          backgroundColor: '#0002',
         }}
       >
         <h1 className="text-center display-1 fw-bold mb-2">Login</h1>
