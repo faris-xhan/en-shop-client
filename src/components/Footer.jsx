@@ -87,7 +87,7 @@ const Payment = styled.img`
 
 const Footer = () => {
   return (
-    <Container>
+    <Container className="border-top">
       <Left>
         <Logo>EnShop</Logo>
         <Desc>
