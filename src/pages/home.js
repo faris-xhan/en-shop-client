@@ -3,11 +3,13 @@ import Slider from '../components/Slider';
 import Categories from '../components/Categories';
 import Products from '../components/Products';
 import Newsletter from '../components/Newsletter';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const Home = (props) => {
+  const isDesktop = useMediaQuery('(min-width: 980px)');
   return (
     <Container fluid className="p-0">
-      <Slider />
+      {isDesktop && <Slider />}
       <Categories />
       <Products />
       <Newsletter />

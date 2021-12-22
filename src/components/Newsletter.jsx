@@ -1,59 +1,35 @@
-import { Send } from 'react-bootstrap-icons';
 import styled from 'styled-components';
+import { Send } from 'react-bootstrap-icons';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
 
-const Container = styled.div`
+const NewsletterContainer = styled(Container)`
   height: 60vh;
-  background-color: #fcf5f5;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 `;
-const Title = styled.h1`
-  font-size: 70px;
-  margin-bottom: 20px;
-`;
-
-const Desc = styled.div`
-  font-size: 24px;
-  font-weight: 300;
-  margin-bottom: 20px;
-`;
-
-const InputContainer = styled.div`
-  width: 50%;
-  height: 40px;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid lightgray;
-`;
-
-const Input = styled.input`
-  border: none;
-  flex: 8;
-  padding-left: 20px;
-`;
-
-const Button = styled.button`
-  flex: 1;
-  border: none;
-  background-color: teal;
-  color: white;
-`;
-
-const Newsletter = () => {
+const Newsletter = (props) => {
   return (
-    <Container>
-      <Title>Newsletter</Title>
-      <Desc>Get timely updates from your favorite products.</Desc>
-      <InputContainer>
-        <Input placeholder="Your email" />
-        <Button>
-          <Send />
-        </Button>
-      </InputContainer>
-    </Container>
+    <NewsletterContainer>
+      <Container>
+        <h1 className="text-center display-1 fw-bold">Newsletter</h1>
+        <p className="text-center display-6">
+          Get timely updates from your favorite products.
+        </p>
+        <InputGroup className="mb-3" size="lg">
+          <FormControl
+            placeholder="You're email"
+            aria-label="Enter you're email to subscribe and get news about our latest products"
+          />
+          <Button variant="success">
+            <Send />{' '}
+          </Button>
+        </InputGroup>
+      </Container>
+    </NewsletterContainer>
   );
 };
 

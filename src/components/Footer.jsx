@@ -8,6 +8,7 @@ import {
   Twitter,
 } from 'react-bootstrap-icons';
 import styled from 'styled-components';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const Container = styled.div`
   display: flex;
@@ -86,8 +87,9 @@ const Payment = styled.img`
 `;
 
 const Footer = () => {
+  const isDesktop = useMediaQuery('(min-width: 960px)');
   return (
-    <Container className="border-top">
+    <Container className={`${isDesktop ? '' : 'flex-column'} border-top`}>
       <Left>
         <Logo>EnShop</Logo>
         <Desc>

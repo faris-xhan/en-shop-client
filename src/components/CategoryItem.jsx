@@ -4,7 +4,8 @@ import Button from 'react-bootstrap/Button';
 const Container = styled.div`
   flex: 1;
   margin: 3px;
-  height: 70vh;
+  height: 200px;
+  max-height: 200px;
   position: relative;
 `;
 

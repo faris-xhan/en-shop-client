@@ -3,16 +3,19 @@ import Container from 'react-bootstrap/Container';
 import { Brand } from './Brand';
 import Searchbar from './Searchbar';
 import Navlinks from './Navlinks';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const Navbar = (props) => {
+  const isDesktop = useMediaQuery('(min-width: 960px)');
   return (
-    <BootstrapNavbar bg="dark" variant="dark">
+    <BootstrapNavbar bg="dark" variant="dark" className="flex-column">
       <Container>
         <Brand />
         <div className="flex-grow-1" />
-        <Searchbar />
+        {isDesktop && <Searchbar />}
         <Navlinks />
       </Container>
+      {!isDesktop && <Searchbar width="100%" />}
     </BootstrapNavbar>
   );
 };

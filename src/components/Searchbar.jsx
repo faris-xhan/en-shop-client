@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 
 const StyledSearchbar = styled(FormControl)`
-  width: 230px;
+  width: ${(props) => (props.width ? '100%' : '230px')};
   opacity: 0.8;
   transition: opacity 260ms ease-in-out;
   &:focus {
@@ -21,15 +21,16 @@ const Searchbar = (props) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="d-flex">
+    <Form onSubmit={handleSubmit} className="d-flex w-100 justify-content-end">
       <StyledSearchbar
         size="sm"
         type="search"
-        className="me-2"
+        className="m-2 "
         placeholder="Search"
         aria-label="Search"
         value={input}
         onChange={handleInputChange}
+        {...props}
       />
     </Form>
   );
