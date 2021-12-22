@@ -9,4 +9,5 @@
 - React.js.
 - Bootstrap.
 - React-Bootstrap.
+- Styled Components
 - React-Bootstrap-Icons.
