@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
 import FormItem from '../components/FormItem';
+import { Link } from 'react-router-dom';
 
 const BackgroundContainer = styled(Container)`
   background: linear-gradient(
@@ -93,6 +94,9 @@ const Register = (props) => {
             </SubmitButton>
           </div>
         </Form>
+        <Link to="/login" className="mx-1 text-dark">
+          Already have an account?
+        </Link>
       </Container>
     </BackgroundContainer>
   );
