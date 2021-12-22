@@ -39,6 +39,12 @@ export const categories = [
     img: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bomber-jackets-lead-1633354600.jpg?crop=1.00xw:0.892xh;0,0.0484xh&resize=1200:*',
     title: 'Jackets',
   },
+  {
+    id: 4,
+    img: 'https://www.bugatti-fashion.com/en/Magazine/fileadmin/bugatti/magazine/Magazin_Ratgeber/20190327_Magazin_Ratgeber_Slim_Jeans/20192703_bugatti_Magazin_Slim_Jeans.jpg',
+
+    title: 'Jeans',
+  },
 ];
 
 export const popularProducts = [

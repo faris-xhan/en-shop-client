@@ -4,7 +4,7 @@ import CategoryItem from './CategoryItem';
 
 const Categories = (props) => {
   return (
-    <Container fuild className="d-flex ">
+    <Container fluid className="d-flex p-0 ">
       {categories.map((item) => (
         <CategoryItem key={item.id} item={item} />
       ))}
