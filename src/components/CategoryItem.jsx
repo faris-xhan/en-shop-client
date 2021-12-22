@@ -39,7 +39,9 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button variant="outline-danger">SHOP NOW</Button>
+        <Button variant="outline-danger" className="fw-bold text-white">
+          SHOP NOW
+        </Button>
       </Info>
     </Container>
   );
