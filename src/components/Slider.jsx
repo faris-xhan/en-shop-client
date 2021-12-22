@@ -6,7 +6,7 @@ import { sliderItems } from '../mock';
 
 const Container = styled.div`
   width: 100%;
-  height: 87vh;
+  height: 100%;
   display: flex;
   position: relative;
   overflow: hidden;

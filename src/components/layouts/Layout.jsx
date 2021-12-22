@@ -8,7 +8,7 @@ const Layout = (props) => {
     <Container fluid className="p-0">
       <Announcements />
       <Navbar />
-      <Container fluid className="p-0 " style={{ height: '80vh' }}>
+      <Container fluid className="p-0 " style={{ height: '92.9vh' }}>
         <Outlet />
       </Container>
     </Container>

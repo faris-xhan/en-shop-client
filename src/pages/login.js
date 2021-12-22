@@ -25,8 +25,8 @@ const Login = (props) => {
     }
   };
   return (
-    <Container className="d-flex align-items-center justify-content-center h-100 ">
-      <Container>
+    <Container className="d-flex align-items-center justify-content-center h-100 bg-transparent">
+      <Container className="bg-transparent">
         <h1 className="text-center display-1 fw-bold mb-2">Login</h1>
         {error && (
           <Alert variant="danger" onClose={() => setError('')} dismissible>
