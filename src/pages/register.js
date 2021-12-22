@@ -1,8 +1,27 @@
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Alert } from 'react-bootstrap';
+import styled from 'styled-components';
+import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
+
+const BackgroundContainer = styled(Container)`
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url('https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Flagship_100_Blog_2880x1800_Apparel.jpg')
+      center;
+  background-size: cover;
+`;
+
+const SubmitButton = styled(Button)`
+  width: 200px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+`;
 
 const Register = (props) => {
   const [error, setError] = useState('');
@@ -27,8 +46,17 @@ const Register = (props) => {
   };
 
   return (
-    <Container className="d-flex align-items-center justify-content-center h-100 ">
-      <Container>
+    <BackgroundContainer
+      fluid
+      className="d-flex align-items-center justify-content-center h-100 "
+    >
+      <Container
+        className="p-5 rounded rounded-5 text-dark"
+        style={{
+          maxWidth: '600px',
+          backgroundColor: '#0002',
+        }}
+      >
         <h1 className="text-center display-1 fw-bold mb-2">Register</h1>
         {error && (
           <Alert variant="danger" onClose={() => setError('')} dismissible>
@@ -63,12 +91,14 @@ const Register = (props) => {
               required
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Login
-          </Button>
+          <div className="d-flex justify-content-center align-items-center">
+            <SubmitButton variant="primary" type="submit">
+              Register
+            </SubmitButton>
+          </div>
         </Form>
       </Container>
-    </Container>
+    </BackgroundContainer>
   );
 };
 
