@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { Alert } from 'react-bootstrap';
 import { useState } from 'react';
 import styled from 'styled-components';
+import FormItem from '../components/FormItem';
 
 const BackgroundContainer = styled(Container)`
   background: linear-gradient(
@@ -62,27 +63,23 @@ const Login = (props) => {
           </Alert>
         )}
         <Form onSubmit={handleFormSubmit} noValidate>
-          <Form.Group className="mb-3" controlId="email">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              type="email"
-              name="email"
-              placeholder="Enter email"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="password">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="remember">
-            <Form.Check type="checkbox" name="remember" label="Remember" />
-          </Form.Group>
+          <FormItem
+            label="Email address"
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            required
+          />
+          <FormItem
+            label="Password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <FormItem controlId="remember">
+            <Form.Check type="checkbox" name="remember" label="Remember Me" />
+          </FormItem>
           <div className="d-flex justify-content-center align-items-center">
             <LoginButton variant="primary" type="submit" size="lg">
               Login

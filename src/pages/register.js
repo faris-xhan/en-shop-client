@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import styled from 'styled-components';
 import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
+import FormItem from '../components/FormItem';
 
 const BackgroundContainer = styled(Container)`
   background: linear-gradient(
@@ -64,33 +65,28 @@ const Register = (props) => {
           </Alert>
         )}
         <Form onSubmit={handleFormSubmit} noValidate>
-          <Form.Group className="mb-3" controlId="fullname">
-            <Form.Label>Full Name</Form.Label>
-            <Form.Control
-              type="text"
-              name="fullname"
-              placeholder="Enter full name"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="email">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              type="email"
-              name="email"
-              placeholder="Enter email"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="password">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
-          </Form.Group>
+          <FormItem
+            label="Full Name"
+            type="text"
+            name="fullname"
+            placeholder="Enter full name"
+            required
+          />
+
+          <FormItem
+            label="Email address"
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            required
+          />
+          <FormItem
+            label="Password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
           <div className="d-flex justify-content-center align-items-center">
             <SubmitButton variant="primary" type="submit">
               Register
