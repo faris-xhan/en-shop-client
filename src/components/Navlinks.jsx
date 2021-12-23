@@ -24,7 +24,9 @@ const Navlinks = (props) => {
     <Nav className="me-auto" activeKey={location.pathname}>
       {navItems}
       <Nav.Item>
-        <ShoppingCartItem />
+        <Link to="/cart">
+          <ShoppingCartItem />
+        </Link>
       </Nav.Item>
     </Nav>
   );
