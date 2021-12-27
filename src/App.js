@@ -5,6 +5,7 @@ import Layout from './components/layouts/Layout';
 import ProductList from './pages/productsList';
 import Product from './pages/product';
 import Cart from './pages/cart';
+import NotFound from './pages/notFound';
 
 const { Routes, Route } = require('react-router-dom');
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/products" element={<ProductList />} />
         <Route path="/products/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

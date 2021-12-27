@@ -1,4 +1,9 @@
-import { Heart, Search, Cart } from 'react-bootstrap-icons';
+import {
+  Heart as HeartIcon,
+  Link as LinkIcon,
+  Cart as CartIcon,
+} from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Info = styled.div`
@@ -70,13 +75,15 @@ const Product = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Icon>
-          <Cart />
+          <CartIcon />
         </Icon>
         <Icon>
-          <Search />
+          <Link to="/products/1">
+            <LinkIcon />
+          </Link>
         </Icon>
         <Icon>
-          <Heart />
+          <HeartIcon />
         </Icon>
       </Info>
     </Container>
